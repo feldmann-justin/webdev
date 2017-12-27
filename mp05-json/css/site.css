@@ -1,0 +1,522 @@
+
+/** 
+    Justin Feldmann 
+    CS 234 004
+    9/29/2017
+    File: schedule.html
+**/
+
+/* Centers home image as a block. */
+
+#loginbtn {
+
+font-family: 'Century Gothic', Verdana;
+text-align: right;
+
+
+}
+
+#loginbtn a {
+
+    text-decoration: none;
+
+}
+
+#button_home_div {
+
+    max-width: 60%;
+    margin: auto;
+    padding-top: 50px;
+
+}
+
+#button_home {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.floatleft {
+    
+    float: left;
+    
+
+}
+
+.floatright {
+
+    float: right;
+
+}
+
+body {
+
+    background: linear-gradient(white, lightskyblue, blue);
+    background-attachment: fixed; /* allows for gradient to fill entire screen & not get cut off on bottom portion */
+    margin: 0 0 10px 0;
+    height: auto;
+
+}
+
+p {
+
+    font-family: 'Palatino Linotype', Arial;
+    padding-top: 20px;
+
+}
+
+nav.mainlinks {
+
+    /**border: .5px solid teal;
+    border-radius: 5px; **/
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    
+    position: fixed;
+    text-align: center;
+    background-color: rgb(71, 161, 189);
+
+}
+
+nav a {
+
+    text-decoration: none;
+    font-family: 'Century Gothic', Verdana;
+    padding: 0 50px;
+    transition: text-shadow 0.5s;
+
+}
+
+nav a:link {
+
+    color: darkblue;
+
+}
+
+nav a:hover {
+
+    text-shadow: 0 0 5px #00B3FF;
+    color: white;
+
+}
+
+nav a:active {
+
+    text-shadow: 0 0 15px rgb(255, 0, 55), 0 0 15px rgb(255, 238, 0);
+
+}
+
+nav a:visited {
+
+    color: teal;
+
+}
+
+nav a:visited:hover {
+
+    color: #FFFDD0
+
+}
+
+/** Can't use 'text-shadow' with :visited pseudo selector; can only use a few props w/ :visited due
+    to security issues */
+/**nav a:visited:hover {
+
+    text-shadow: 0 0 5px #C300FF;
+
+}*/
+
+img {
+
+    padding: 30px;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    display: block;
+    font-family: 'Century Gothic', Verdana;
+    
+}
+
+/* Login.html specific styles */
+
+#formparentcontainer {
+
+width: 400px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+form {
+
+font: 'Palatino Linotype', Arial;
+min-width: 10%;
+max-width: 100%;
+background-color: #DDDDDD;
+border: 20px solid white;
+border-radius: 10px;
+padding: 10px;
+
+}
+
+label {
+    display: inline-block;
+    text-align: right;
+    margin-right: 8px;
+    font-family: Arial;
+
+}
+
+input[type=text], input[type=password] {
+
+    width: 60%;
+    padding: 10px;
+    margin: 6px 0;
+    border: 3px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 10px;
+
+}
+
+input[type=password] {
+
+    margin-right: 40px;
+
+}
+
+
+input[type=submit] {
+    
+    width: 70%;
+    background-color: #09f;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+
+ }
+
+ input[type=submit]:hover {
+    
+    background-color: #07d;
+
+ }
+
+ input:focus {
+
+    outline-width: 0;
+
+ }
+
+ #labelsandinputs {
+
+    text-align: center;
+
+ }
+
+ #labelsandinputs p{
+
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+
+ }
+
+ #passwordsection {
+
+    padding-left: 5px;
+
+ }
+
+ 
+/* Index.html specific styles */
+#welcome {
+
+    padding-bottom: 20px;
+
+}
+
+#cougarstatue {
+
+    float: left;
+    max-width: 100%;
+    margin: auto;
+    margin-left: 15px;
+
+}
+
+#contactinfo {
+
+position: relative;
+top: -10px;
+
+
+}
+
+#contactinfo p {
+
+padding: 0px;
+margin: 0;
+
+}
+
+#githublink {
+
+width: 100%;
+
+}
+
+#githublink a {
+
+color: black;
+text-decoration: none;
+padding-top: 15px;
+display: block;
+
+}
+
+/* About.html specific styles */
+
+#inprogress {
+
+    display: inline-block;
+
+}
+
+#inprogress li {
+
+    position: relative;
+    left: -20px;
+
+}
+
+span {
+
+    font-family: 'Century Gothic', Verdana;
+
+}
+
+ul {
+
+    font-family: 'Palatino Linotype', Arial;
+    font-size: 14px;
+
+}
+
+li::before {
+
+    /* Do this to reinsert list markers when changing list item display */
+    content: url("../images/elecgtr_icon16.png");
+    padding-right: 5px;
+
+}
+
+ul li {
+
+    position: relative; /* Positioning will get the list markers away from the damn image! */
+    left: 30px;
+    display: inline-block; /* gets rid of extra unnessecary width around each list item */
+    /* NOTE: changing display prop from default 'list-item' to w/e gets rid of list markers */
+    
+}
+
+
+/* Schedule.html specific styles */
+#tablediv {
+    
+    display: inline-block;
+    padding-top: 50px;
+    padding-left: 280px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+
+    }
+
+#tablediv table {
+
+    width: 100%;
+
+}
+
+
+#daysofweek th {
+
+    text-align: center;
+
+}
+
+#monday {
+
+
+
+}
+
+#tuesday {
+    
+        background-color: red;
+    
+}
+
+#wednesday {
+    
+        background-color: red;
+    
+}
+
+#thursday {
+    
+        background-color: red;
+    
+}
+
+#friday {
+        
+            background-color: red;
+        
+}
+
+caption {
+
+    font-family: 'Palatino Linotype', Arial;
+
+
+}
+
+table {
+
+    font-family: 'Palatino Linotype', Arial;
+    margin: auto;
+    border-radius: 10px;
+    border-collapse: collapse;
+    background: linear-gradient(to bottom left, white, silver, grey);
+
+}
+
+
+/* Hobbies.html specific styles */
+#guitarsdiv {
+
+    width: 600px;
+    /* min-width: 50%; */
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    
+}
+
+#guitarsdiv img {
+    
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+
+}
+
+#jmjm-section {
+    
+    float: left;
+    clear: left;
+
+}
+
+#jmjm-section p {
+
+    position: relative;
+    top: -20px;
+
+}
+
+#jmjm-section h5 {
+
+    padding-top: 20px;
+
+}
+
+#fender-CD140SCE-section {
+
+    float: left;
+    clear: left;
+
+}
+
+#fender-CD140SCE-section p {
+    
+    position: relative;
+    top: -20px;
+    
+}
+
+#fender-CS140SCE-section h5 {
+    
+    padding-top: 20px;
+    
+}
+
+#ibanez-ijx40-section {
+    
+    float: left;
+    clear: left;
+    
+}
+
+#ibanez-ijx40-section p {
+    
+    position: relative;
+    top: -20px;
+    
+}
+
+#ibanez-ijx40-section h5 {
+    
+    padding-top: 20px;
+    
+}
+
+#reviews {
+
+width: 600px;
+margin-left: auto;
+margin-right: auto;
+
+
+}
+
+#reviews img {
+
+max-width: 100%;
+
+}
+
+footer {
+
+    font-family: 'Century Gothic', Verdana;
+    font-size: 12px;
+    text-align: center;
+    color: #FFFDD0;
+    clear: both;
+    padding-top: 20px;
+    
+
+}
+
+@font-face {
+    font-family: Fender;
+    src: url(../fonts/strato-linked-webfont);
+    
+}
